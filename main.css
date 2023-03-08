@@ -13,7 +13,7 @@ body {
 }
 
 header {
-	color: #6aa84f;
+	color: #93c47d;
 	background-color: #444444;
 	text-align: center;
 	text-shadow: 0px 2px 3px rgba(0,0,0,0.8);
@@ -28,7 +28,7 @@ header {
 }
 
 footer {
-	color: #6aa84f;
+	color: #93c47d;
 	background-color: #444444;
 	text-align: center;
 	text-shadow: 0px 2px 3px rgba(0,0,0,0.8);
@@ -36,7 +36,7 @@ footer {
 
 p {
 	margin-left: 1%;
-	margin-right: 10%;
+	margin-right: 15%;
 	color: #b6d7a8;
 	text-align: left;
 }
