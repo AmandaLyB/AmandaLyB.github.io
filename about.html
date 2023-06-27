@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header>
-		<h1>Coming Soon</h1>
+		<h1>About the Developer</h1>
 	</header>
 	<nav class="nav">
 		<ul class="nav">
@@ -19,8 +19,28 @@
 			<li class="nav"><a href="https://amandalyb.github.io/about">About</a></li>
 		</ul>
 	</nav>
+	<div class="main_body">
+		<h3>Maotica - part cat, part dev</h3>
+		<img src="/images/cute-cat-typing.gif" alt="Resource Icons - June Update" style="width:500px;height:600px;">
+		<p>Maotica is an aspiring game developer and computer programming student based in the United States. Her favorite games are Minecraft, Subnautica, Zelda, Core Keeper, and Deep Rock Galactic, but she does occasionally queue up for an ARAM or TFT game.</p>
+		<p>Other hobbies include watching cat videos, reading fantasy & sci-fi novels, and learning languages.</p>		
+		<button onclick="myFunction()">Reveal Contact</button>
+		<div id="reveal" style="display:none">
+			<p>MaoticaChillCraft@gmail.com</p>
+		</div>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("reveal");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+					}
+				}
+		</script>
+	</div>
 	<footer>
-		<h4>© copyright amandalyb.github.io</h4>
+		
 	</footer>
 </body>
 </html>
