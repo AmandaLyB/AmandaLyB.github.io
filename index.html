@@ -13,7 +13,7 @@
 <body>
 	<header>
 		<h1>Game Development Blog</h1>
-		<h4>Unreal Engine 5.2 Project - 3D Multiplayer Open World Survival & Crafting</h4>
+		<h4>Unreal Engine 5.3 Project - 3D Block Game</h4>
 	</header>
 	<div class="nav">
 		<nav class="nav">
@@ -25,54 +25,38 @@
 		</nav>
 	</div>
 	<div class="main_body">
-		<h2>June</h2>
+		<h2>Update 01 - Spawning Block Blueprints with Custom Materials and Meshes</h2>
 		
-		<p>First Update! The goal of this project is to create a fully functioning 3D game in the open world survival craft genre with support for multiplayer as a learning experience and a starting point for more complex projects. The player will be able to harvest materials, craft items, fight enemies, and explore the world by completing challenges and puzzles. The project will be considered complete when it is Steam-ready.</p>
+		<p>Blocks are defined using inheritance from a master block blueprint. Blocks are then split based on whether they are interactable (chests, crafting tables, etc.) or not (building blocks). Block materials have been created based on a master material using the same methodology. Using polymorphism, the block material is able to take in one material or many, as is the case with the grass block which uses three materials to define the sides, top, and bottom. Blocks are set to spawn using the 1 through 5 keys on the keyboard. </p> 
 		
-		<p>So far, I have created the 3D Unreal Engine 5.2 project using the Blueprint Editor and installed the Craft Resource Icons Marketplace content to get started with creating an inventory system. The character model and animations are from SmartPoly's UE Course, which will be the basic guide for the project. The character's idle, walk, and run animations have been hooked up for both first and third person. </p> 
-		
-		<p>The basic inventory system is currently in progress, with drag and drop functionality set up for the player's inventory. The hotbar is still in development.</p> 
-		
-		<img src="/images/resource_icons.JPG" alt="Resource Icons - June Update" style="width:763px;height:426px;">
-		<img src="/images/Basic_Inventory_June.png" alt="Inventory - June Update" style="width:1071px;height:600px;">
+		<p>Initial Blocks: </p>
+		<img src="/images/Progress_Update_01.png" alt="Basic Blocks" style="width:auto;height:500px">
 		
 		<ul>
-			<li class="li_heading">Summary</li>
+			<li class="li_heading">Up Next</li>
 				<ul>
-					<li>Project Creation</li>
-					<li>Icon and Character Assets Imported</li>
-					<li>First and Third Person Animations (Idle/Walk/Run)</li>
-					<li>Multiplayer Framework Initialized with Server/Client</li>
-					<li>Drag and Drop Functionality</li>
-					<li>Player Controller & Survival Game Mode Created</li>
-				</ul>
-			<li class="li_heading">Next Steps</li>
-				<ul>
-					<li>Finish Hotbar/Equip System</li>
-					<li>Add Harvesting Functionality</li>
+					<li>Add Hotbar</li>
+					<li>Apply Block Materials</li>
+					<li>Create Chest Interactable</li>
 				</ul>
 		</ul>
-		<h2>July</h2>
-		<p>Major progress! July is wrapping up with several additions to the inventory system, including a player hotbar with equip/dequip functionality and item stacking. The main harvesting system is now implemented with random quantity loot drops based on tool type and tier with support for future server rates. There are two kinds of tools in the game thus far, a stone hatchet and stone pickaxe, which can be used to mine rocks or cut trees. Rocks, trees, and bushes now exist in the game with destructable actors, unique sounds, and specific loot drops.</p>
 		
-		<p>Inventory and Destructables:</p>
-		<img src="/images/Inventory.jpg" alt="Inventory - July Update" style="width:1000px;height:auto;">
-		<img src="/images/RockDestruction.jpg" alt="Rock - July Update" style="width:1000px;height:auto;">
-		<img src="/images/TreeDestruction.jpg" alt="Tree - July Update" style="width:1000px;height:auto;">
+		<h2>Updated 02 - Serialization, Hotbar, New Materials, and Generating Item Icons</h2>
+		
+		<p>The game now has a save state using a hash map to store game data inside of a game instance. Variable data will no longer be deleted when exiting play for the specified Level. Additionally, a basic HUD widget has been implemented. The HUD contains a hotbar that allows both mouse wheel selection and numeric selection of the individual slots, a player icon, and a functional health indicator. </p> 
+		
+		<p>The icons displayed in the hotbar were created using a special Level created specifically for high resolution screenshots of each item added to the game. The orthographic-esque view was attained through reducing the camera's FOV and the scene transparency was achieved through setting the custom depth mask parameter of the block mesh to true. New matierals have also been added to enhance the look of the blocks during development.</p>
+		
+		<p>Hotbar and Blocks: </p>
+		<img src="/images/Progress_Update_02.png" alt="Hotbar and Materials" style="width:auto;height:500px;">
 		
 		<ul>
-			<li class="li_heading">Summary</li>
+			<li class="li_heading">Up Next</li>
 				<ul>
-					<li>Expanded Inventory System (Hotbar, Item Stacking, and Equip/Dequip)</li>
-					<li>Stone Hatchet and Stone Pickaxe Items with Animations</li>
-					<li>Trees, Bushes, and Rocks with Harvesting and Loot System</li>
-					<li>Sound Cues and Attenuation for Harvesting</li>
-				</ul>
-			<li class="li_heading">Next Steps</li>
-				<ul>
-					<li>Crafting System</li>
-					<li>Player Stats</li>
-					<li>Consumable Items</li>
+					<li>Inventory System</li>
+					<li>Health Indicator Visual Update</li>
+					<li>Death Indicator</li>
+					<li>Experimenting with Mode Macros</li>
 				</ul>
 		</ul>
 		
